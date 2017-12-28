@@ -1,10 +1,11 @@
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
+
 body {
-	background-image: url(images/body.jpg);
-	background-repeat: no-repeat;
+    background-image: url(images/body.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -12,51 +13,71 @@ body {
     padding: 0;
     width: 100%;
 }
+
 button {
-	background-color: brown !important;
-	border-color: brown !important;
+    background-color: brown !important;
+    border-color: brown !important;
 }
 
 .jumb {
-	background-color: rgb(205, 165, 123);
-	font-family: fantasy;
-	font-weight: bolder;
-	font-size: 120%;
-	margin-left: 20% !important;
-	margin-right: 20% !important;
+    background-color: rgb(205, 165, 123);
+    font-family: fantasy;
+    font-weight: bolder;
+    font-size: 120%;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
 }
-.table.table-bordered > tbody > tr > td {
-    border:1px solid brown !important;
+
+.table.table-bordered>tbody>tr>td {
+    border: 1px solid brown !important;
 }
-.col{
-	margin-left: 5% !important;
-	margin-right: 5% !important;
-	font-weight: bolder !important;
-	font-family:fantasy;
-	font-size: 120%;
-	text-align: center !important;
+
+.col {
+    margin-left: 25% !important;
+    margin-right: 30% !important;
+    font-weight: bolder !important;
+    font-family: fantasy;
+    font-size: 120%;
+    text-align: center !important;
 }
-.col1{
-	background-color: rgb(147,67,55) !important;
+
+.col1 {
+    background-color: rgb(147, 67, 55) !important;
 }
-.col2{
-	background-color: rgb(124,77,30) !important;
+
+.col2 {
+    background-color: rgb(124, 77, 30) !important;
 }
-.col3{
-	background-color: rgb(124,96,93) !important;
+
+.col3 {
+    background-color: rgb(124, 96, 93) !important;
 }
-h3 {
-	text-align: center !important; 
-	font-family: fantasy;
-	font-weight: bolder !important;
+
+h2 {
+    text-align: center !important;
+    font-family: fantasy;
+    font-weight: bolder !important;
 }
+
 .jumbotron {
-	padding: 2%;
+    padding: 2%;
 }
+
 label {
-	font-family: fantasy !important;
+    font-family: fantasy !important;
+}
+
+.form-group {
+    float: right !important;
+    margin-right: 30% !important;
 }
 
 a {
-	color: white !important;
+    color: white !important;
+}
+
+@media screen and (max-width: 450px) {
+    .col {
+        margin: 0 !important;
+    }
 }

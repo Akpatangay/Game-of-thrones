@@ -1,7 +1,7 @@
 <div class="container">
     <div ng-repeat="data in mainCtrl.entireData | orderBy : sort">
-        <div  ng-if="$index == 0"><h3> <u>BOOKS</u> </h3>
-            <div class="form-group" style="float: right; margin-right: 5%;">
+        <div  ng-if="$index == 0"><h2> <u>BOOKS</u> </h2>
+            <div class="form-group">
                 <label> Sort By Order</label>
                 <select ng-model="sort" onchange="sortBooks()">
                     <option value='' ng-selected="true"> Select </option>
@@ -11,8 +11,8 @@
             </div>
         </div>
 
-        <div  ng-if="$index == 10"><h3> <u>HOUSES</u> </h3>
-            <div class="form-group" style="float: right; margin-right: 5%;">
+        <div  ng-if="$index == 10"><h2> <u>HOUSES</u> </h2>
+            <div class="form-group">
                 <label> Sort By Order</label>
                 <select ng-model="sort" onchange="sortHouses()">
                     <option value='' ng-selected="true"> Select </option>
@@ -22,8 +22,8 @@
             </div>
         </div>
 
-        <div  ng-if="$index == 20"><h3> <u>CHARACTERS</u> </h3>
-            <div class="form-group" style="float: right; margin-right: 5%;">
+        <div  ng-if="$index == 20"><h2> <u>CHARACTERS</u> </h2>
+            <div class="form-group">
                 <label> Sort By Order</label>
                 <select ng-model="sort" onchange="sortChars()">
                     <option value='' ng-selected="true"> Select </option>
@@ -32,21 +32,6 @@
                 </select>
             </div>
         </div>
-        
-
         <custom-row></custom-row>
-
-
-        <!-- <div ng-if="data.authors" ng-init="key='books'">
-            <custom-row></custom-row>
-        </div>
-        
-        <div ng-if="data.region" ng-init="key='houses'">
-            <custom-row></custom-row>
-        </div>
-        
-        <div ng-if="data.gender" ng-init="key='characters'">
-            <custom-row></custom-row> 
-        </div> -->
     </div>
 </div>

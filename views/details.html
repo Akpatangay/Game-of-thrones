@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row" ng-if="details.store.isbn">
+        <div class="jumb jumbotron">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                	<h2 style="text-align: center;"><b><u>{{details.store.name}}</u></b></h2>
+                    <tbody>
+                        <tr>
+                            <td ng-if="details.store.authors[0]">Author</td>
+                            <td>{{details.store.authors[0]}} </td>
+                        </tr>
+                        <tr>
+                            <td ng-if="details.store.publisher">Publisher</td>
+                            <td>{{details.store.publisher}} </td>
+                        </tr>
+                        <tr>
+                            <td ng-if="details.store.numberOfPages">Total Pages</td>
+                            <td>{{details.store.numberOfPages}} </td>
+                        </tr>
+                        <tr>
+                            <td ng-if="details.store.mediaType">Media Type</td>
+                            <td> {{details.store.mediaType}} </td>
+                        </tr>
+                        <tr>
+                            <td ng-if="details.store.released">Released On</td>
+                            <td>{{details.store.released | date : 'medium' }}</td>
+                        </tr>
+                        <tr>
+                            <td ng-if="details.store.country">Country</td>
+                            <td>{{details.store.country}} </td>
+                        </tr>
+                        <tr>
+                            <td ng-if="details.store.characters">Total Characters</td>
+                            <td> {{details.store.characters.length }} </td>
+                        </tr>
+                        <tr>
+                            <td>ISBN </td>
+                            <td> {{details.store.isbn}} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-if="details.store.gender">
+        <div class="jumb jumbotron">
+            <div ng-if="details.store.aliases[0]"><h2 style="text-align: center;"><b><u>{{details.store.aliases[0]}}</u></b></h2> </div><br/>
+            <div ng-if="details.store.gender">Gender :- {{details.store.gender}} </div>
+            <div ng-if="details.store.culture">Culture :- {{details.store.culture}} </div>
+            <div ng-if="details.store.name">Name :- {{details.store.name}} </div>
+            <div ng-if="details.store.books">Appeared in Books :-
+                <div ng-repeat="book in details.books">
+                    <li>{{book}}</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-if="details.store.region">
+        <div class="jumb jumbotron">
+            <div ng-if="details.store.name"><h2 style="text-align: center;"><b><u>{{details.store.name}}</u></b></h2> </div><br/>
+            <div ng-if="details.store.region">Region :- {{details.store.region}} </div>
+            <div ng-if="details.store.coatOfArms">Coat Of Arms :- {{details.store.coatOfArms}} </div>
+            <div ng-if="details.store.words">Words :- {{details.store.words}} </div>
+            <div ng-if="details.store.heir">Heir :- {{details.heir}} </div>
+            <div ng-if="details.store.currentLord">Current Lord :- {{details.currentLord}} </div>
+            <div ng-if="details.store.overlord">Overlord :- {{details.overlord}} </div>
+            <div ng-if="details.store.titles != ''">Titles :-
+                <div ng-repeat="title in details.store.titles">
+                    <li> {{title}} </li>
+                </div>
+            </div>
+            <div ng-if="details.store.founded">Founded :- {{details.store.founded}} </div>
+        </div>
+    </div>
+</div>

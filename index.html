@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+
+<head>
+    <title>ALL ABOUT GAME OF THRONES</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <p class="col-md-12 col-sm-12 col-xs-12">
+                <h1 style="color: brown; font-size: 500%; text-align: center !important; font-family:fantasy;">GAME OF THRONES</h1>
+                <h2 style="color: brown; font-size: 300%; text-align: center !important; font-family:fantasy;">ICE AND FIRE</h2>
+            </p>
+            <hr style="height: 5px; border: 0px solid brown; border-top-width: 5px;" />
+        </div>
+    </header>
+
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+
+
+    <script type="text/javascript" src="angular/app.js"></script>
+    <script type="text/javascript" src="angular/services/fetchData.js"></script>
+    <script type="text/javascript" src="angular/services/sort.js"></script>
+    <script type="text/javascript" src="angular/controllers/mainController.js"></script>
+    <script type="text/javascript" src="angular/controllers/detailsController.js"></script>
+    <script type="text/javascript" src="angular/route.js"></script>
+    <script type="text/javascript" src="directives/dir.js"></script>
+
+</body>
+
+</html>

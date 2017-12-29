@@ -6,7 +6,7 @@ app.controller('mainController', ['fetchDataService', function(fetchDataService)
     this.characters = [];
 
     this.getBooksData = function() {
-        fetchDataService.booksData()
+        fetchDataService.booksData() //fetching data with the help of custom service
             .then(function success(response) {
                 console.log(response);
                 main.books = response.data;

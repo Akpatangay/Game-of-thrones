@@ -1,68 +1,52 @@
 <div class="container" id="tableContainer">
-        <div style="text-align: center;">
-            <form>
-                <input class="inp" style="text-align: center;" type="text" placeholder="Search Books/Houses/Characters" ng-model='sort'></input>
-            </form>
+    <div style="text-align: center;">
+        <!-- for general search of all the categories -->
+        <form>
+            <input class="inp" style="text-align: center;" type="text" placeholder="Search Books/Houses/Characters" ng-model='sort'></input>
+        </form>
         <br/>
     </div>
     <div ng-repeat="data in mainCtrl.entireData | filter : sort">
+        <!-- to display heading as the category name according to index -->
         <div ng-if="$index == 0">
             <h2> <u>BOOKS</u> </h2>
             <br/>
-            <div>
-                <div>
-                    <form>
-                        <input class="inp1" type="text" placeholder="Search Books" ng-model='sort.data.name'></input>
-                    </form>
-                </div>
-                <div class="form-group">
-                    <label> Sort By Order</label>
-                    <select ng-model="sort" id="sortBooks" onchange="sortFun(event)">
-                       <option value='' ng-selected="true"> Select </option>
-                    <option value='ascending' > ascending</option>
-                    <option value='descending' > descending</option>
-                    </select>
-                </div>
+            <!-- sorting individual categories --> 
+            <div class="form-group">
+                <label> Sort By Order</label>
+                <!-- function call when the value in the drop-down changes -->
+                <select id="sortBooks" onchange="sortFun(event)">
+                    <option value='' ng-selected="true"> Select </option>
+                    <option value='ascending'> ascending</option>
+                    <option value='descending'> descending</option>
+                </select>
             </div>
         </div>
         <div ng-if="$index == 10">
             <h2> <u>HOUSES</u> </h2>
             <br/>
-            <div>
-                <div>
-                    <form>
-                        <input class="inp1" type="text" placeholder="Search Houses" ng-model='sort.data.name'></input>
-                    </form>
-                </div>
-                <div class="form-group">
-                    <label> Sort By Order</label>
-                    <select ng-model="sort" id="sortHouses" onchange="sortFun(event)">
-                        <option value='' ng-selected="true"> Select </option>
-                    <option value='ascending' > ascending</option>
-                    <option value='descending' > descending</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label> Sort By Order</label>
+                <select id="sortHouses" onchange="sortFun(event)"> 
+                    <option value='' ng-selected="true"> Select </option>
+                    <option value='ascending'> ascending</option>
+                    <option value='descending'> descending</option>
+                </select>
             </div>
         </div>
         <div ng-if="$index == 20">
             <h2> <u>CHARACTERS</u> </h2>
             <br/>
-            <div>
-                <div>
-                    <form>
-                        <input class="inp1" type="text" placeholder="Search Characters" ng-model='sort.data.name'></input>
-                    </form>
-                </div>
-                <div class="form-group">
-                    <label> Sort By Order</label>
-                    <select ng-model="sort" id="sortChars" onchange="sortFun(event)">
-                        <option value='' ng-selected="true"> Select </option>
-                    <option value='ascending' > ascending</option>
-                    <option value='descending' > descending</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label> Sort By Order</label>
+                <select id="sortChars" onchange="sortFun(event)">
+                    <option value='' ng-selected="true"> Select </option>
+                    <option value='ascending'> ascending</option>
+                    <option value='descending'> descending</option>
+                </select>
             </div>
         </div>
+        <!-- displaying data through customRowPage template using customRowDirective -->
         <custom-row></custom-row>
     </div>
 </div>

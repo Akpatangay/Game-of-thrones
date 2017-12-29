@@ -97,7 +97,7 @@ a {
         margin-bottom: 10% !important;
     }
     label {
-        margin-left: 8%;
+        margin-left: 12%;
         text-align: center !important;
     }
     select.option {
@@ -121,9 +121,10 @@ a {
     }
     .inp {
         align-self: center;
-        min-width: 20%;
+        min-width: 40%;
         max-width: 100%;
         padding-top: 1%;
         padding-bottom: 1%;
+        margin-right: 3%; 
     }
 }

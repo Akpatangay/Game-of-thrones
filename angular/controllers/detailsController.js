@@ -2,9 +2,9 @@ app.controller("detailsController", ['$http', '$routeParams', 'fetchDataService'
     var main = this;
     this.key = $routeParams.key;
     this.value = $routeParams.value;
-    this.data = [];
-    this.store = {};
-    this.books = [];
+    this.data = [];  //array to store all the data of each category
+    this.store = {}; //object to store all the data
+    this.books = []; //array to store all the books in which each character appeared
 
     if (main.key == 'books') {
         fetchDataService.booksData()
@@ -61,7 +61,7 @@ app.controller("detailsController", ['$http', '$routeParams', 'fetchDataService'
                 console.log(error);
             });
     }
-
+    //to fetch the book names from their URLs
     main.getcharInBooks = function(b) { debugger;
         $http({
             method: 'GET',
@@ -73,7 +73,7 @@ app.controller("detailsController", ['$http', '$routeParams', 'fetchDataService'
             console.log(error);
         });
     };
-
+    // to fetch the names of the lords from their URLs
     main.getLordsInHouses = function(URL, id) {
         $http({
             method: 'GET',

@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row" ng-if="details.store.isbn">
+    <div class="row" ng-if="details.store.isbn"> <!-- to check if the details are related to books -->
         <div class="jumb jumbotron">
             <div class="table-responsive">
                 <table class="table table-bordered">
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="row" ng-if="details.store.gender">
+    <div class="row" ng-if="details.store.gender"> <!-- to check if the details are related to characters -->
         <div class="jumb jumbotron">
             <div ng-if="details.store.aliases[0]"><h3 style="text-align: center; color: brown;"><b><u>{{details.store.aliases[0]}}</u></b></h3> </div><br/>
             <div ng-if="details.store.gender">Gender :- {{details.store.gender}} </div>
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <div class="row" ng-if="details.store.region">
+    <div class="row" ng-if="details.store.region"> <!-- to check if the details are related to houses -->
         <div class="jumb jumbotron">
             <div ng-if="details.store.name"><h3 style="text-align: center; color: brown;"><b><u>{{details.store.name}}</u></b></h3> </div><br/>
             <div ng-if="details.store.region">Region :- {{details.store.region}} </div>

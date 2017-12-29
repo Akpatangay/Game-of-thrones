@@ -1,7 +1,7 @@
 function sortFun(ev) {
 	var listToSort;
-	if(ev.target.id == "sortBooks") {
-		listToSort = $('custom-row').slice(0,10);
+	if(ev.target.id == "sortBooks") { //if the selected dropdown is of books.
+		listToSort = $('custom-row').slice(0,10); //as first 10 rows are books.
 		if(ev.target.value == "ascending") { 
 			listToSort.sort(sortAsc);
 			$.each(listToSort, function(index, row) {
@@ -42,7 +42,7 @@ function sortFun(ev) {
 	}
 }
 
-function sortAsc(a, b) {
+function sortAsc(a, b) { //to check if a comes before b
 	return ($(a).find(".jumbotron").text().trim() > $(b).find(".jumbotron").text().trim());
 }
 

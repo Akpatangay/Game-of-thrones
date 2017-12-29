@@ -3,21 +3,21 @@
 	    <div ng-if="data.authors" ng-init="key='books'">
 	        <div class="col-xs-12 col-sm-12">
 		        <div class="jumbotron col col1">
-		            <div><a href="#!/{{key}}/{{data.subLink}}">{{data.mainLink}}</a></div>
+		            <div><a href="#!/{{key}}/{{data.subLink}}" class="book-name">{{data.mainLink}}</a></div>
 		        </div>
 		    </div>
 	    </div>
 	    <div ng-if="data.region" ng-init="key='houses'">
 	        <div class="col-xs-12 col-sm-12">
 		        <div class="jumbotron col col2">
-		            <div><a href="#!/{{key}}/{{data.subLink}}">{{data.mainLink}}</a></div>
+		            <div><a href="#!/{{key}}/{{data.subLink}}" class="house-name">{{data.mainLink}}</a></div>
 		        </div>
 		    </div>
 	    </div>
 	    <div ng-if="data.gender" ng-init="key='characters'">
 	        <div class="col-xs-12 col-sm-12">
 		        <div class="jumbotron col col3">
-		            <div><a href="#!/{{key}}/{{data.subLink}}">{{data.mainLink}}</a></div>
+		            <div><a href="#!/{{key}}/{{data.subLink}}" class="char-name">{{data.mainLink}}</a></div>
 		        </div>
 		    </div>
     	</div>

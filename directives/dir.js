@@ -5,7 +5,7 @@ app.directive("customRow", function() {
         // scope: {
         //             data.mainLink: '='                  
         //         },
-        controller: function($scope) { debugger;
+        controller: function($scope) {
             if($scope.data.authors) {
                 $scope.data.subLink = $scope.data.isbn;
                 $scope.data.mainLink = $scope.data.name;

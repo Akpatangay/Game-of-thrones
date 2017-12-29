@@ -1,17 +1,18 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
+html,
 body {
-    background-image: url(images/body.jpg);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#background {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/body.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    background-size: cover;
+    opacity: 0.9;
+    filter:alpha(opacity=90);
 }
 
 button {
@@ -57,6 +58,7 @@ h2 {
     text-align: center !important;
     font-family: fantasy;
     font-weight: bolder !important;
+    color: white;
 }
 
 .jumbotron {
@@ -65,19 +67,63 @@ h2 {
 
 label {
     font-family: fantasy !important;
-}
-
-.form-group {
-    float: right !important;
-    margin-right: 30% !important;
+    color: white;
 }
 
 a {
     color: white !important;
 }
 
-@media screen and (max-width: 450px) {
+.form-control {
+    text-align: center !important;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 300% !important;
+    }
+    h2 {
+        font-size: 200% !important;
+    }
     .col {
-        margin: 0 !important;
+        margin: 5% !important;
+    }
+    .jumbotron {
+        padding: 2%;
+    }
+    .inp1 {
+        text-align: center;
+        margin-left: 20%;
+        margin-bottom: 10% !important;
+    }
+    label {
+        margin-left: 8%;
+        text-align: center !important;
+    }
+    select.option {
+        text-align: center !important;
+        margin-bottom: 5%;
+    }
+    .inp {
+    	width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .inp1 {
+        margin-left: 26% !important;
+        text-align: center;
+        float: left !important;
+    }
+    .form-group {
+        float: right !important;
+        margin-right: 30% !important;
+    }
+    .inp {
+        align-self: center;
+        min-width: 20%;
+        max-width: 100%;
+        padding-top: 1%;
+        padding-bottom: 1%;
     }
 }

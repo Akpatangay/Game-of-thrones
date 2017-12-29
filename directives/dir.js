@@ -2,10 +2,7 @@ app.directive("customRow", function() {
     return {
         restrict: "E", // restrict element
         templateUrl: "views/customRowPage.html",
-        // scope: {
-        //             data.mainLink: '='                  
-        //         },
-        controller: function($scope) {
+        controller: function($scope) { 
             if($scope.data.authors) {
                 $scope.data.subLink = $scope.data.isbn;
                 $scope.data.mainLink = $scope.data.name;

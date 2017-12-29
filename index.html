@@ -13,21 +13,22 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
-    <header>
+<body id="background">
+        <header>
+            <div class="container">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p>
+                        <h1 style="color: rgb(242,150,61); font-size: 500%; text-align: center !important; font-family:fantasy;">GAME OF THRONES</h1>
+                        <h2 style="color: rgb(247,201,117); font-size: 300%; text-align: center !important; font-family:fantasy;">ICE AND FIRE</h2>
+                    </p>
+                </div>
+            </div>
+        </header>
         <div class="container">
-            <p class="col-md-12 col-sm-12 col-xs-12">
-                <h1 style="color: brown; font-size: 500%; text-align: center !important; font-family:fantasy;">GAME OF THRONES</h1>
-                <h2 style="color: brown; font-size: 300%; text-align: center !important; font-family:fantasy;">ICE AND FIRE</h2>
-            </p>
-            <hr style="height: 5px; border: 0px solid brown; border-top-width: 5px;" />
+            <hr style="padding: 0; margin: 0; height: 5px; border: 0 solid  rgb(220,220,220); border-top-width: 5px;" />
         </div>
-    </header>
-
-    <div class="container">
+        <br/>
         <ng-view></ng-view>
-    </div>
-
 
     <script type="text/javascript" src="angular/app.js"></script>
     <script type="text/javascript" src="angular/services/fetchData.js"></script>
@@ -36,7 +37,6 @@
     <script type="text/javascript" src="angular/controllers/detailsController.js"></script>
     <script type="text/javascript" src="angular/route.js"></script>
     <script type="text/javascript" src="directives/dir.js"></script>
-
 </body>
 
 </html>

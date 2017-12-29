@@ -62,12 +62,12 @@ app.controller("detailsController", ['$http', '$routeParams', 'fetchDataService'
             });
     }
 
-    main.getcharInBooks = function(books) {
+    main.getcharInBooks = function(b) { debugger;
         $http({
             method: 'GET',
             url: main.charInBooksUrl
         }).then(function(response) {
-            main.books[books] = response.data.name;
+            main.books[b] = response.data.name;
         }, function(error) {
             alert("An error occured! Check the console.");
             console.log(error);
